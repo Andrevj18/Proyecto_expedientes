@@ -90,8 +90,10 @@ def OrdenarExpediente(codigos, nombres, documentos, tramites, descripciones, fec
 
 def GuardarInformacion(codigos, nombres, documentos, tramites, descripciones, fechas, areas):
     print("Guardando informacion...")
+    # Abrimos el archivo en modo escritura ('w') y usaremos codificacion utf-8 para evitar problemas con las tildes
     with open("expedientes.txt", "w", encoding="utf-8") as archivo:
         for i in range(len(codigos)):
             linea = f"{codigos[i]}|{nombres[i]}|{documentos[i]}|{tramites[i]}|{descripciones[i]}|{fechas[i]}|{areas[i]}\n"
+            # Escribimos la linea construida en el archivo de texto
             archivo.write(linea)
     print("Datos guardados en el archivo 'expedientes.txt'.")
