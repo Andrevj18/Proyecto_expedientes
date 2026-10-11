@@ -20,6 +20,8 @@ def main():
     opcion = 0
     while opcion != 5:
         MostrarMenu()
+        #Intentamos convertir lo que escribe el usuario a un numero entero
+        # Si el usuario ingresa una letra u otro simbolo que no es numerico le saldra rror.
         try:
             opcion = int(input("Seleccione una opcion"))
         except ValueError:
