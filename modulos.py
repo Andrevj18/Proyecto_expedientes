@@ -1,4 +1,4 @@
-Def SeleccionarTramite():
+def SeleccionarTramite():
     print("\n===== TIPO DE TRAMITE =====")
     print("1. Solicitud administrativa")
     print("2. Licencia o autorizacion")
